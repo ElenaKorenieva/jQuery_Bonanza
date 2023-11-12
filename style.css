@@ -1,0 +1,36 @@
+.hero-background {
+  position: relative;
+  height: 30rem;
+  background: url("./assets/Blogging1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-title,
+.hero-text {
+  color: white;
+}
+
+.btn-width {
+  width: 10rem;
+}
+
+.with-line::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid grey;
+  border-radius: 5px;
+  width: 75%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
