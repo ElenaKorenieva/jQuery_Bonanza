@@ -1,34 +1,13 @@
-function fadeGalleryImg1() {
-  $(".img1").fadeToggle(1000, () => {});
-}
+$(".fade-btn").click(function () {
+  const btnNumber = $(this).attr("class").match(/\d+/)[0];
+  const imgClass = `.img${btnNumber}`;
 
-function fadeGalleryImg2() {
-  $(".img2").fadeToggle(1000, () => {});
-}
-
-function fadeGalleryImg3() {
-  $(".img3").fadeToggle(1000, () => {});
-}
-
-function fadeGalleryImg4() {
-  $(".img4").fadeToggle(1000, () => {});
-}
-
-$(".fade-btn1").click(() => {
-  fadeGalleryImg1();
+  fadeGalleryImg(imgClass);
 });
 
-$(".fade-btn2").click(() => {
-  fadeGalleryImg2();
-});
-
-$(".fade-btn3").click(() => {
-  fadeGalleryImg3();
-});
-
-$(".fade-btn4").click(() => {
-  fadeGalleryImg4();
-});
+function fadeGalleryImg(elementClass) {
+  $(elementClass).fadeToggle(1000, () => {});
+}
 
 function changeTextColor() {
   $(".activities-text").toggleClass("text-danger");
